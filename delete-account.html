@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delete Account & Data — Chess Openings: Trainer & AI</title>
+  <meta name="description" content="Request permanent account and cloud data deletion for Chess Openings: Trainer & AI (com.chessopenings.trainer) in compliance with Google Play developer policies.">
+  <link rel="icon" type="image/png" href="icon.png">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .danger-box {
+      background: rgba(239, 68, 68, 0.08);
+      border-left: 3px solid #ef4444;
+      border-radius: 4px;
+      padding: 1.25rem;
+      margin: 1.5rem 0;
+    }
+    .danger-box h3 {
+      color: #f87171;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+    .danger-box p, .danger-box ul {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      margin-bottom: 0.5rem;
+    }
+    .danger-box ul {
+      padding-left: 1.4rem;
+    }
+    .danger-box li {
+      margin-bottom: 0.35rem;
+    }
+    .form-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 1.75rem;
+      margin: 1.5rem 0;
+    }
+    .form-group {
+      margin-bottom: 1.25rem;
+      text-align: left;
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 0.4rem;
+    }
+    .form-group input[type="email"],
+    .form-group input[type="password"] {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      background: var(--bg);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 8px;
+      color: #ffffff;
+      font-size: 0.95rem;
+      font-family: inherit;
+      box-sizing: border-box;
+    }
+    .form-group input:focus {
+      outline: none;
+      border-color: #ef4444;
+      box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.25);
+    }
+    .btn-delete {
+      width: 100%;
+      padding: 0.85rem 1.5rem;
+      background: #ef4444;
+      color: #ffffff;
+      font-size: 0.95rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.15s ease, transform 0.15s ease;
+      margin-top: 0.5rem;
+    }
+    .btn-delete:hover {
+      background: #dc2626;
+      transform: translateY(-1px);
+    }
+    .btn-delete:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none;
+    }
+    .portal-alert {
+      padding: 0.85rem 1.15rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      margin-bottom: 1.25rem;
+      display: none;
+    }
+    .portal-alert.error {
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid rgba(239, 68, 68, 0.35);
+      color: #fca5a5;
+      display: block;
+    }
+    .portal-alert.success {
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      color: #34d399;
+      display: block;
+    }
+    .contact-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="brand">
+        <img src="icon.png" alt="Chess Openings Logo">
+        <span>Chess Openings</span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="delete-account.html" class="active">Delete Account</a></li>
+          <li><a href="mailto:gamewingssupport@gmail.com">Support</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Legal / Deletion Content -->
+  <main class="legal-container">
+    <h1>Account & Data Deletion Portal</h1>
+    <div class="legal-meta">
+      <strong>Compliance:</strong> Google Play Data Safety & User Privacy Policy &bull; 
+      <strong>App:</strong> Chess Openings: Trainer & AI (<code>com.chessopenings.trainer</code>) &bull; 
+      <strong>Developer:</strong> ROHITH WILSON T
+    </div>
+
+    <p>In compliance with Google Play User Data policies, users of <strong>Chess Openings: Trainer & AI</strong> may request the complete and permanent deletion of their account and all associated cloud data.</p>
+
+    <!-- Data Deletion Scope Notice -->
+    <div class="danger-box">
+      <h3>What Data Gets Permanently Deleted?</h3>
+      <p>Initiating an account deletion permanently purges the following records from our systems:</p>
+      <ul>
+        <li><strong>Authentication Profile:</strong> Your registered email address, authentication credentials, and user identifier in Google Firebase Authentication.</li>
+        <li><strong>Cloud Match & Review History:</strong> All recorded games, Stockfish analysis results, blunder reviews, and key moments stored in Google Cloud Firestore (<code>/gameHistory/{uid}</code>).</li>
+        <li><strong>Opening Mastery & Study Plans:</strong> Your opening repertoire progress, spaced-repetition schedules, learning liabilities, and tactical study plans (<code>/users/{uid}</code> and <code>/progress/{uid}</code>).</li>
+      </ul>
+      <p style="font-size: 0.85rem; color: #fca5a5; margin-top: 0.5rem;">
+        <strong>Retention & Disaster Recovery:</strong> Active cloud data is purged immediately upon verification. Encrypted disaster-recovery backups are purged within standard 30–60 day lifecycle overwrites. Offline local storage on your physical device can also be cleared via Android Settings > Apps > Chess Openings > Clear Storage.
+      </p>
+    </div>
+
+    <!-- Option 1: Direct Web Authentication Deletion -->
+    <h2>Option 1: Direct Web Deletion Portal</h2>
+    <p>If you uninstalled the mobile app or do not have access to your mobile device, enter your registered account credentials below to verify ownership and permanently delete your account and cloud data:</p>
+
+    <div class="form-card">
+      <div id="statusAlert" class="portal-alert"></div>
+
+      <form id="deleteForm">
+        <div class="form-group">
+          <label for="userEmail">Account Email Address</label>
+          <input type="email" id="userEmail" required placeholder="your.email@example.com" autocomplete="email">
+        </div>
+        <div class="form-group">
+          <label for="userPassword">Account Password</label>
+          <input type="password" id="userPassword" required placeholder="••••••••" autocomplete="current-password">
+        </div>
+        <button type="submit" id="submitBtn" class="btn-delete">Permanently Delete Account & Cloud Data</button>
+      </form>
+    </div>
+
+    <!-- Option 2: In-App Self-Service -->
+    <h2>Option 2: Delete Directly Inside the Mobile App</h2>
+    <p>If you currently have the mobile app installed, you can delete your account instantly without using this web portal:</p>
+    <ol style="color: var(--text-muted); padding-left: 1.5rem; margin-bottom: 1.5rem; font-size: 0.95rem;">
+      <li style="margin-bottom: 0.35rem;">Open <strong>Chess Openings: Trainer & AI</strong> on your mobile device.</li>
+      <li style="margin-bottom: 0.35rem;">Navigate to <strong>Settings</strong> (gear icon).</li>
+      <li style="margin-bottom: 0.35rem;">Under the <strong>Account</strong> section, tap <strong>Delete Account</strong>.</li>
+      <li style="margin-bottom: 0.35rem;">Enter your password to confirm and permanently delete your account and local device data.</li>
+    </ol>
+
+    <!-- Option 3: Manual Developer Request -->
+    <h2>Option 3: Manual Deletion via Support Email</h2>
+    <p>If you signed in with an external provider, forgot your password, or require manual support, you can submit an email deletion request directly to our developer team:</p>
+    <div class="contact-card">
+      <p style="font-size: 0.95rem; margin-bottom: 0.5rem;">Send an email from your registered account address with the subject line <strong>"Data Deletion Request"</strong>:</p>
+      <p style="margin-bottom: 0.5rem;">
+        <strong style="color: var(--accent); font-size: 1.1rem;">
+          <a href="mailto:gamewingssupport@gmail.com?subject=Data%20Deletion%20Request">gamewingssupport@gmail.com</a>
+        </strong>
+      </p>
+      <p style="font-size: 0.85rem; color: var(--text-dim); margin-bottom: 0;">
+        Manual deletion requests are processed and confirmed within 7 business days following identity verification.
+      </p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="delete-account.html">Delete Account</a>
+      <a href="mailto:gamewingssupport@gmail.com">Contact Support</a>
+    </div>
+    <p>&copy; 2026 ROHITH WILSON T. All rights reserved. | Chess Openings: Trainer & AI (<code>com.chessopenings.trainer</code>)</p>
+  </footer>
+
+  <!-- Firebase Web SDK Modular Integration -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getAuth, signInWithEmailAndPassword, deleteUser } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+    import { getFirestore, doc, deleteDoc, collection, getDocs, writeBatch, query, limit } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+    // Client configuration matching src/services/firebase.js
+    const firebaseConfig = {
+      apiKey: "AIzaSyCjyJ-0KeJ5TI9Mw6RbI9MPZaWj_6LIvzE",
+      authDomain: "chess-trainer-app.firebaseapp.com",
+      projectId: "chess-trainer-app",
+      storageBucket: "chess-trainer-app.firebasestorage.app",
+      messagingSenderId: "753668654264",
+      appId: "1:753668654264:web:0bd24421ebfd199cf4e04d",
+      measurementId: "G-MMLMVXVRJ9"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const db = getFirestore(app);
+
+    const form = document.getElementById('deleteForm');
+    const emailInput = document.getElementById('userEmail');
+    const passwordInput = document.getElementById('userPassword');
+    const submitBtn = document.getElementById('submitBtn');
+    const alertBox = document.getElementById('statusAlert');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      alertBox.className = 'portal-alert';
+      alertBox.style.display = 'none';
+
+      const email = emailInput.value.trim();
+      const password = passwordInput.value;
+
+      if (!confirm("Are you completely sure you want to permanently delete your ChessTrainer account and cloud data? This action cannot be undone.")) {
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Authenticating and deleting data...";
+
+      try {
+        // 1. Authenticate user credentials to verify ownership
+        const cred = await signInWithEmailAndPassword(auth, email, password);
+        const user = cred.user;
+        const userId = user.uid;
+
+        // 2. Delete cloud data in Firestore with strict failure tracking and chunked batch writes
+        const failedPaths = [];
+
+        const deleteCollectionBatched = async (collRef, pathPrefix) => {
+          let hasMore = true;
+          while (hasMore) {
+            try {
+              const q = query(collRef, limit(400));
+              const snap = await getDocs(q);
+              if (snap.empty) {
+                hasMore = false;
+                break;
+              }
+              const batch = writeBatch(db);
+              snap.docs.forEach((d) => batch.delete(d.ref));
+              try {
+                await batch.commit();
+              } catch (batchErr) {
+                snap.docs.forEach((d) => failedPaths.push(`${pathPrefix}/${d.id}`));
+                hasMore = false;
+                break;
+              }
+              if (snap.docs.length < 400) {
+                hasMore = false;
+              }
+            } catch (queryErr) {
+              failedPaths.push(pathPrefix);
+              hasMore = false;
+              break;
+            }
+          }
+        };
+
+        // 2a. Delete users/{userId}/blunders
+        await deleteCollectionBatched(collection(db, 'users', userId, 'blunders'), `users/${userId}/blunders`);
+
+        // 2b. Delete users/{userId}/sessions
+        await deleteCollectionBatched(collection(db, 'users', userId, 'sessions'), `users/${userId}/sessions`);
+
+        // 2c. Delete users/{userId}/profile/weaknessData
+        try { 
+          await deleteDoc(doc(db, 'users', userId, 'profile', 'weaknessData')); 
+        } catch (e) {
+          if (e.code === 'permission-denied') failedPaths.push(`users/${userId}/profile/weaknessData`);
+        }
+
+        // 2d. Delete gameHistory/{userId}/games
+        await deleteCollectionBatched(collection(db, 'gameHistory', userId, 'games'), `gameHistory/${userId}/games`);
+
+        // 2e. Delete gameHistory/{userId} root doc if present
+        try { 
+          await deleteDoc(doc(db, 'gameHistory', userId)); 
+        } catch (e) {
+          if (e.code === 'permission-denied') failedPaths.push(`gameHistory/${userId}`);
+        }
+
+        // 2f. Delete progress/{userId}
+        try { 
+          await deleteDoc(doc(db, 'progress', userId)); 
+        } catch (e) {
+          if (e.code === 'permission-denied') failedPaths.push(`progress/${userId}`);
+        }
+
+        // 2g. Delete users/{userId} root doc
+        try { 
+          await deleteDoc(doc(db, 'users', userId)); 
+        } catch (_) {
+          failedPaths.push(`users/${userId}`);
+        }
+
+        if (failedPaths.length > 0) {
+          throw new Error("Could not delete all cloud documents (" + failedPaths.join(', ') + "). Account identity preserved for safety. Please try again.");
+        }
+
+        // 3. Delete Firebase Auth User
+        await deleteUser(user);
+
+        alertBox.className = 'portal-alert success';
+        alertBox.textContent = "Your account and all associated cloud data have been permanently deleted.";
+        form.reset();
+        submitBtn.style.display = 'none';
+      } catch (err) {
+        console.error("Deletion error:", err);
+        alertBox.className = 'portal-alert error';
+        if (err.code === 'auth/invalid-credential' || err.code === 'auth/wrong-password' || err.code === 'auth/user-not-found') {
+          alertBox.textContent = "Invalid email or password. Please verify your credentials or use the email request option below.";
+        } else if (err.code === 'auth/requires-recent-login') {
+          alertBox.textContent = "Please sign in again to re-verify your identity before deleting your account.";
+        } else {
+          alertBox.textContent = err.message || "Failed to process account deletion request. Please try again or use the email request option below.";
+        }
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Permanently Delete Account & Cloud Data";
+      }
+    });
+  </script>
+</body>
+</html>
