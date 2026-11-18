@@ -32,7 +32,7 @@
   <main class="legal-container">
     <h1>Privacy Policy</h1>
     <div class="legal-meta">
-      <strong>Effective Date:</strong> November 9, 2026 &bull; 
+      <strong>Effective Date:</strong> November 19, 2026 &bull; 
       <strong>App:</strong> Chess Openings: Trainer & AI (<code>com.chessopenings.trainer</code>) &bull; 
       <strong>Developer:</strong> ROHITH WILSON T
     </div>
@@ -40,41 +40,50 @@
     <p>This Privacy Policy explains how <strong>ROHITH WILSON T</strong> ("we", "us", or "our") collects, uses, and safeguards your information when you use our mobile application <strong>Chess Openings: Trainer & AI</strong> (referred to as the "App").</p>
 
     <div class="highlight-box">
-      <strong>Quick Summary:</strong> We respect your privacy. You can use all core features of the App as a Guest without providing any personal information. If you create an account, we use Google Firebase strictly to sync your chess match history and settings. We do not sell your personal data or display intrusive advertisements.
+      <strong>Quick Summary:</strong> We respect your privacy. ChessTrainer is currently completely free and displays zero advertisements. You can use all core features anonymously as a Guest without creating an account. If you choose to create an account, Google Firebase is used strictly to sync your match history and study plans. We do not sell your personal data or track your advertising identifier.
     </div>
 
     <h2>1. Information We Collect</h2>
 
     <h3>A. Personal Information (Optional)</h3>
-    <p>The App allows you to play and train completely anonymously as a <strong>Guest</strong>. If you choose to register an account or sign in using Google Sign-In, we collect:</p>
+    <p>The App allows you to play, train, and study completely anonymously as a <strong>Guest</strong>. If you choose to register an account or sign in with Google Firebase Authentication, we collect:</p>
     <ul>
       <li><strong>Email Address:</strong> To identify your user account and authenticate your sign-in.</li>
       <li><strong>Display Name:</strong> To personalize your in-app profile.</li>
     </ul>
 
     <h3>B. Chess Training & Game Data</h3>
-    <p>To provide opening mastery tracking and personal progress analytics, the App saves:</p>
+    <p>To provide opening mastery tracking, personalized coaching, and progress analytics, the App saves:</p>
     <ul>
       <li>Match history, moves played, match outcomes, and blunder reviews.</li>
       <li>Opening repertoire mastery levels, quiz results, and spaced-repetition schedules.</li>
-      <li>Tactical puzzle ratings and completed puzzle indices.</li>
-      <li>App preferences (dark mode, sound effects, language selection).</li>
+      <li>Tactical puzzle ratings, completed puzzle indices, and review queues.</li>
+      <li>Player intelligence metrics, learning liabilities, and adaptive study plans.</li>
+      <li>App preferences (dark mode, sound effects, language selection, AI coach persona).</li>
     </ul>
-    <p>This data is stored locally on your device using IndexedDB/local storage. If you sign in, it is synchronized with Google Cloud Firestore.</p>
+    <p>This data is stored locally on your device using IndexedDB and local storage. If you sign in, your data is synchronized with Google Cloud Firestore under your authenticated user ID.</p>
 
     <h3>C. Diagnostic & Analytics Information</h3>
     <p>We use <strong>Google Analytics for Firebase</strong> to collect aggregated, non-personally identifiable diagnostic and usage metrics, including:</p>
     <ul>
-      <li>Screen views and feature interactions (e.g., puzzles solved, games analyzed).</li>
+      <li>Screen views and feature interactions (e.g., puzzles solved, games analyzed, study plan tasks completed).</li>
       <li>App launch times, session duration, and device model/operating system version.</li>
       <li>Non-fatal errors and crash logs to help us identify and fix bugs.</li>
+    </ul>
+
+    <h3>D. Third-Party AI & Voice Services</h3>
+    <p>The App provides advanced chess analysis and coaching features designed with privacy-first principles:</p>
+    <ul>
+      <li><strong>Stockfish Chess Engine:</strong> The chess engine runs 100% locally on your device via WebAssembly. Your positions and moves are never sent to external servers for chess evaluation.</li>
+      <li><strong>Voice Coach:</strong> Standard voice coaching operates using on-device Web Speech API or native Android Text-to-Speech engines without transmitting audio or personal game data to the cloud.</li>
+      <li><strong>Optional Custom Voice Providers:</strong> Users may optionally configure personal API keys for OpenAI or ElevenLabs in Settings. These keys remain stored locally on your device and are used strictly to communicate directly with those respective providers when voice features are triggered.</li>
     </ul>
 
     <h2>2. How We Use Your Information</h2>
     <p>We use the collected information solely for the following purposes:</p>
     <ul>
-      <li><strong>Providing Core Services:</strong> Enabling you to train openings, play against the Stockfish engine, and solve chess puzzles.</li>
-      <li><strong>Cloud Synchronization:</strong> Restoring your match history and ratings across multiple devices when logged in.</li>
+      <li><strong>Providing Core Services:</strong> Enabling you to train openings, play against the Stockfish engine, solve tactical puzzles, and follow adaptive study plans.</li>
+      <li><strong>Cloud Synchronization:</strong> Restoring your match history, repertoire mastery, and ratings across multiple devices when signed in.</li>
       <li><strong>App Quality & Improvement:</strong> Diagnosing performance bottlenecks, fixing crashes, and improving user experience.</li>
       <li><strong>Customer Support:</strong> Responding to user inquiries and troubleshooting technical issues.</li>
     </ul>
@@ -88,17 +97,26 @@
     </ul>
     <p>Google's privacy practices are governed by the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</p>
 
-    <h2>4. Advertising & Tracking</h2>
-    <p>The current version of the App does not display third-party advertisements and does not collect or track the Android Advertising ID (AAID).</p>
+    <h2>4. Advertising & Monetization Policy</h2>
+    <p>Chess Openings: Trainer & AI is currently <strong>completely free and 100% ad-free</strong>:</p>
+    <ul>
+      <li>No third-party advertisements or sponsored banners are displayed.</li>
+      <li>No advertising SDK (such as Google AdMob) is currently active.</li>
+      <li>The App does not collect, access, or track the Android Advertising ID (AAID).</li>
+      <li>All tactical puzzles, opening variations, game reviews, and study plans are freely accessible without ad viewing or paywalls.</li>
+      <li>Native ad placement areas display helpful grandmaster chess tips instead of advertisements.</li>
+      <li>If advertising is introduced in a future version, this Privacy Policy will be updated accordingly prior to activation.</li>
+    </ul>
 
     <h2>5. Data Security & Storage</h2>
-    <p>All data transmitted between the App and Firebase servers is encrypted in transit using industry-standard <strong>HTTPS/TLS protocols</strong>. Access to user records is protected by authenticated Firestore security rules.</p>
+    <p>All data transmitted between the App and Firebase servers is encrypted in transit using industry-standard <strong>HTTPS/TLS protocols</strong>. Access to user records is strictly protected by owner-only Firestore security rules preventing unauthorized access.</p>
 
     <h2>6. User Data Deletion & Rights</h2>
-    <p>You have the right to access, update, or permanently delete your personal information at any time:</p>
+    <p>You have the right to access, export, or permanently delete your personal information at any time:</p>
     <ul>
+      <li><strong>In-App Self-Service Deletion:</strong> You can permanently delete your authenticated account and all associated cloud records directly inside the App by opening <strong>Settings</strong> and selecting <strong>Delete Account</strong>. This permanently removes your user profile and all cloud subcollections (matches, reviews, sessions, blunders, and study plans).</li>
       <li><strong>Local Data:</strong> You can clear all offline game and training data at any time by clearing the App's storage in your device's Android settings.</li>
-      <li><strong>Cloud Account & Data Deletion:</strong> You can request immediate deletion of your Firebase account and all synchronized game records by emailing us at <a href="mailto:gamewingssupport@gmail.com">gamewingssupport@gmail.com</a> with the subject line "Data Deletion Request". We will process and confirm your request within 7 business days.</li>
+      <li><strong>Email Requests:</strong> You may also request deletion of your account and synchronized game records by emailing us at <a href="mailto:gamewingssupport@gmail.com">gamewingssupport@gmail.com</a> with the subject line "Data Deletion Request". We process and confirm verified requests within 7 business days.</li>
     </ul>
 
     <h2>7. Children's Privacy</h2>
